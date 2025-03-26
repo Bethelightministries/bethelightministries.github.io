@@ -1,1 +1,0 @@
-# bethelightministries.github.io
