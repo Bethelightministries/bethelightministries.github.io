@@ -1,0 +1,51 @@
+---
+import blub from "../assets/bulb.webp";
+---
+
+<section class="main_hero">
+  <img src={blub.src} alt="A Light Bulb" />
+  <div>
+    <h1>Be The Light</h1>
+  </div>
+</section>
+
+<style>
+  .main_hero {
+    padding-top: 3rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template: 1fr;
+    place-items: center;
+    & img {
+      width: 100vw;
+      max-height: 33rem;
+      display: block;
+      object-fit: cover;
+      object-position: 10% 60%;
+      filter: blur(8px) brightness(50%);
+      /* brightness(50%) */
+      grid-row: 1;
+      grid-column: 1;
+    }
+    & div {
+      background: linear-gradient(#653e1a, #f8b5b0);
+      color: transparent;
+      background-clip: text;
+      width: fit-content;
+      height: fit-content;
+      overflow: hidden;
+      grid-row: 1;
+      grid-column: 1;
+      z-index: 100;
+    }
+    & h1 {
+      font-size: 5rem;
+      /* color:#653e1a;
+        #f8b5b0 */
+      font-family: "Lavishly Yours", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
+</style>

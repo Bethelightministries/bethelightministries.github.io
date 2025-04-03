@@ -1,0 +1,44 @@
+---
+type Page = {
+    name: string,
+    path: string
+}
+
+const pages: Page[] = [
+    { name: "Home", path: "/" },
+    { name: "Missions", path: "/mission_trips" },
+    { name: "Ministries", path: "/mission_trips" },
+    { name: "Gallery", path: "/mission_trips" }
+]
+---
+
+<nav class="main_nav">
+    { pages.map(page => <a href={page.path}>{page.name}</a>) }
+</nav>
+
+<style>
+  .main_nav {
+    position: fixed;
+    z-index: 50000;
+    width: 100vw;
+    display: flex;
+    background-color: #222;
+  }
+  a:first-child {
+    margin-left: auto;
+  }
+
+  a:last-child {
+    margin-right: auto;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+  }
+
+  a:hover {
+    background-color: #333355;
+  }
+</style>
