@@ -1,0 +1,54 @@
+---
+import call from "../assets/call.svg";
+import mail from "../assets/mail.svg";
+---
+
+<section class="contact">
+  <h1>Contact Us</h1>
+  <div class="contact_row">
+    <span
+      ><a href="mailto:bethelightm01@gmail.com"
+        ><img src={mail.src} alt="mail icon" /> bethelightm01@gmail.com
+      </a></span
+    >
+    <!-- <span><a href="tel:"><img src="assets/call.svg" alt="phone icon">(555) 555-55555</a></span> -->
+  </div>
+</section>
+<style>
+  .contact {
+    width: 100vw;
+    height: 15rem;
+    display: grid;
+    justify-items: center;
+    color: #b1b1b1;
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    & a {
+      display: contents;
+    }
+    & > h1 {
+      /* margin-top: 0;
+        margin-bottom: 0; */
+      margin-left: auto;
+      margin-right: auto;
+      font-family: "Newsreader", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      color: #b1b1b1;
+    }
+    & .contact_row {
+      display: grid;
+      gap: 4rem;
+
+      width: fit-content;
+      place-content: center;
+    }
+    & .contact_row span {
+      display: flex;
+      align-items: center;
+    }
+  }
+</style>
